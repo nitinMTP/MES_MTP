@@ -120,6 +120,10 @@ export default function AuthLogin() {
                       sameSite: "Lax",
                       expires: 0,
                     });
+                    setCookie("token", token, {
+                      expires: 0,
+                      sameSite: "Lax",
+                    });
                   }
 
                   navigate("/");

@@ -6,7 +6,7 @@ const initialState = {
   openItem: ["dashboard"],
   defaultId: "dashboard",
   openComponent: "buttons",
-  drawerOpen: false,
+  drawerOpen: true,
   componentDrawerOpen: true,
 };
 

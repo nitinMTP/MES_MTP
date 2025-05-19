@@ -103,4 +103,14 @@ app.post("/getUser", authenticateToken, async (req, res) => {
   await getUser(req, res);
 });
 
+// Production Report API
+// Recieve Production Report
+app.post("/production-report", express.json(), (req, res) => {
+  const report = req.body;
+  console.log("Received report:", report);
+
+  // TODO: Save to database
+  res.status(200).json({ message: "Report received successfully" });
+});
+
 module.exports = app;

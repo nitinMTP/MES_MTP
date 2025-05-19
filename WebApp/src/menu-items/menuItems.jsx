@@ -1,6 +1,7 @@
 // project import
 import dashboardItems from "./dashboardItems";
 import loginItems from "./loginItems";
+import productionItems from "./productionItems";
 import profileItems from "./profileItems";
 import settingsItems from "./settingsItems";
 
@@ -10,13 +11,14 @@ function menuItems(loggedIn, accessLevel) {
   var items = [];
 
   if (loggedIn) {
-    items = [dashboardItems, profileItems(accessLevel), settingsItems];
-
-    if (accessLevel <= 2) {
-      items.push(settingsItems);
-    }
+    items = [
+      dashboardItems,
+      productionItems,
+      settingsItems,
+      profileItems(accessLevel),
+    ];
   } else {
-    items = [dashboardItems, loginItems];
+    items = [dashboardItems, productionItems, loginItems];
   }
   return { items: items };
 }

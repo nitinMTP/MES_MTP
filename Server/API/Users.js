@@ -176,10 +176,17 @@ function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = req.body.token;
   console.log("Token : ", token);
-  if (!token) return res.sendStatus(401);
+  if (!token) {
+    console.log("No Token Provided");
+
+    return res.sendStatus(401);
+  }
 
   jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
+    if (err) {
+      log("Token Verification Failed : ", err);
+      return res.sendStatus(403);
+    }
     req.user = user;
     next();
   });

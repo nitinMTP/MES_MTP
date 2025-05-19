@@ -75,7 +75,11 @@ export default function WsMessageAndCookies({ children }) {
 
   useEffect(() => {
     // Persist Login
+    console.log("Cookies : ", cookies);
+
     if (cookies.token) {
+      console.log("Cookies Token : ", cookies.token);
+
       const body = {
         _id: cookies._id,
         token: cookies.token,

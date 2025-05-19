@@ -1,15 +1,9 @@
 // assets
-import { BsBuildingFill } from "react-icons/bs";
-import { SlEnergy } from "react-icons/sl";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
-import TextSnippetIcon from "@mui/icons-material/TextSnippet";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 
 // icons
 const icons = {
-  BsBuildingFill,
-  SlEnergy,
-  StarOutlineIcon,
-  TextSnippetIcon,
+  DashboardIcon,
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
@@ -24,7 +18,7 @@ const dashboardItems = {
       title: "Machines",
       type: "item",
       url: "/",
-      icon: icons.BsBuildingFill,
+      icon: icons.DashboardIcon,
       breadcrumbs: true,
     },
   ],

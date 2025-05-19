@@ -7,6 +7,7 @@ import MainLayout from "../layout/MainLayout/MainLayout";
 import ProtectedRoutes from "./ProtectedRoutes";
 import RedirectRoutes from "./RedirectRoutes";
 import { element } from "prop-types";
+import ProductionReportCard from "../pages/Production/ProductionReportCard";
 
 // import Dashboard from "../pages/Dashboard";
 const Dashboard = Loadable(lazy(() => import("../pages/Dashboard/Dashboard")));
@@ -16,12 +17,6 @@ const MachineInfo = Loadable(
 const UserProfile = Loadable(
   lazy(() => import("../pages/Profile/UserProfile"))
 );
-
-const PriorityMachines = Loadable(
-  lazy(() => import("../pages/PrioMachines/PriorityMachines"))
-);
-
-const Report = Loadable(lazy(() => import("../pages/Report/Report")));
 
 const Users = Loadable(lazy(() => import("../pages/Setting/Users/Users")));
 
@@ -47,13 +42,8 @@ function MainRoutes(loggedIn, accessLevel) {
         children: [],
       },
       {
-        path: "/priority-machines",
-        element: <PriorityMachines />,
-        children: [],
-      },
-      {
-        path: "/report",
-        element: <Report />,
+        path: "/production",
+        element: loggedIn ? <ProductionReportCard /> : <ProtectedRoutes />,
         children: [],
       },
       {

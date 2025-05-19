@@ -9,6 +9,7 @@ import dayjs from "dayjs";
 import { setFromTo } from "../../store/reducers/machineInfo";
 import DowntimeTable from "./DowntimeTable";
 import StatusCard from "./StatusCard";
+import OEE from "./OEE";
 
 export default function MachineInfo() {
   const { accessLevel } = useSelector((state) => state.user);
@@ -90,7 +91,7 @@ export default function MachineInfo() {
               size={6}
               sx={{ backgroundColor: "#333", height: "50%", borderRadius: 4 }}
             >
-              OEE
+              <OEE />
             </Grid>
             <Grid
               size={6}

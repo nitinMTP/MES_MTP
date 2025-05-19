@@ -46,6 +46,59 @@ function Row({ data }) {
 export default function DowntimeTable({ downtime, loading }) {
   const { language } = useSelector((state) => state.siteConfig);
 
+  downtime = [
+    {
+      from: "2023-10-01T12:00:00Z",
+      to: "2023-10-01T12:30:00Z",
+      reason: "Reason 1",
+    },
+    {
+      from: "2023-10-01T13:00:00Z",
+      to: "2023-10-01T13:30:00Z",
+      reason: "Reason 2",
+    },
+    {
+      from: "2023-10-01T14:00:00Z",
+      to: "2023-10-01T14:30:00Z",
+      reason: "Reason 3",
+    },
+    {
+      from: "2023-10-01T15:00:00Z",
+      to: "2023-10-01T15:30:00Z",
+      reason: "Reason 4",
+    },
+    {
+      from: "2023-10-01T16:00:00Z",
+      to: "2023-10-01T16:30:00Z",
+      reason: "Reason 5",
+    },
+    {
+      from: "2023-10-01T17:00:00Z",
+      to: "2023-10-01T17:30:00Z",
+      reason: "Reason 6",
+    },
+    {
+      from: "2023-10-01T18:00:00Z",
+      to: "2023-10-01T18:30:00Z",
+      reason: "Reason 7",
+    },
+    {
+      from: "2023-10-01T19:00:00Z",
+      to: "2023-10-01T19:30:00Z",
+      reason: "Reason 8",
+    },
+    {
+      from: "2023-10-01T20:00:00Z",
+      to: "2023-10-01T20:30:00Z",
+      reason: "Reason 9",
+    },
+    {
+      from: "2023-10-01T21:00:00Z",
+      to: "2023-10-01T21:30:00Z",
+      reason: "Reason 10",
+    },
+  ];
+
   return (
     <MainCard
       sx={{
